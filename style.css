@@ -69,10 +69,21 @@ header {
   font-size: 20px;
 }
 
-.head li a:hover,
-.head li a:active {
-  color: #ee3471;
-  text-decoration: underline;
+.head li a::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: rgb(122, 39, 201);
+  display: block;
+  margin: 1px;
+}
+
+.head li a:hover::after,
+.head li a:active ::after{
+   /* color: #ee3471;
+  /* text-decoration: underline; */ 
+  width: 100%;
+  transition: .5s ease-in-out;
 }
 
 .article1 {
@@ -139,6 +150,8 @@ h1 {
   text-decoration: underline;
   line-height: 1.3em;
 }
+
+
 h4 {
   font-weight: 400;
 }
